@@ -1,16 +1,56 @@
-import React from "react"
+import React, { useState, useEffect } from "react"
 import NewPlantForm from "./NewPlantForm"
 import PlantList from "./PlantList"
 import Search from "./Search"
 
+const API_URL = "http://localhost:6001/plants"
+
 function PlantPage() {
-  return (
-    <main>
-      <NewPlantForm />
-      <Search />
-      <PlantList />
-    </main>
-  )
+    // plant list state
+    const [plantList, setPlantList] = useState([])
+    // error state
+    const [error, setError] = useState(null)
+
+    // add a plant to the list
+    // uses pessimistic rendering
+    const addPlant = (newPlant) => {
+        fetch(API_URL, {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify(newPlant)
+        })
+            .then(r => {
+                if (r.ok) return r.json()
+                else throw new Error("Error posting data")
+            })
+            // add data returned from POST
+            .then(data => setPlantList([...plantList, data]))
+            .catch(err => setError(err.message))
+    }
+
+    function fetchPlants() {
+        fetch(API_URL)
+            .then(r => {
+                if (r.ok) return r.json()
+                else throw new Error("Error fetching data")
+            })
+            // overwrite plant list with fetched data
+            .then(data => setPlantList(data))
+            .catch(err => setError(err.message))
+    }
+
+    // load plants on first render
+    useEffect(fetchPlants, [])
+
+    return (
+        <main>
+            <NewPlantForm />
+            <Search />
+            <PlantList plantList={plantList} />
+        </main>
+    )
 }
 
 export default PlantPage
