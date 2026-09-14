@@ -6,6 +6,10 @@ Despite the example db.json and the example responses listed below, if you force
 Additionally, I attempted to neaten the output by forcing the prices to appear with correct decimals (e.g. 55.00 instead of just 55), which also breaks the tests, as they check for exact strings, not using .includes or parsing numerical values. 
 If you'd like to see my version with the corrected numerical values, I've made it live on [GitHub pages](https://adriennvarn.github.io/lab2-react-hooks-plantshop-cr-vite/), as usual, though you'll have to run the json server locally for it to work.
 
+\
+\
+\
+\
 
 # Phase 2 Code Challenge: Plantsy
 
