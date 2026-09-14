@@ -1,6 +1,7 @@
 import React, { useState } from "react"
 
 function NewPlantForm({ addPlant }) {
+    // blank data for init and reset
     const blankPlantData = {
         name: "",
         image: "",
@@ -17,7 +18,6 @@ function NewPlantForm({ addPlant }) {
             ...plantData,
             [name]: value
         })
-        console.log(plantData)
     }
 
     const handleSubmit = (e) => {

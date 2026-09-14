@@ -10,6 +10,8 @@ function PlantPage() {
     const [plantList, setPlantList] = useState([])
     // error state
     const [error, setError] = useState(null)
+    // filter for search
+    const [filter, setFilter] = useState("")
 
     // add a plant to the list
     // uses pessimistic rendering
@@ -45,11 +47,18 @@ function PlantPage() {
     // load plants on first render
     useEffect(fetchPlants, [])
 
+    // return plant list filtered by search; if filter is empty, return whole list
+    function filteredPlantList() {
+        return (filter === "") ? plantList : plantList.filter(plant => (
+            plant.name.toLowerCase().includes(filter.toLowerCase())
+        ))
+    }
+
     return (
         <main>
             <NewPlantForm addPlant={addPlant} />
-            <Search />
-            <PlantList plantList={plantList} />
+            <Search filter={filter} setFilter={setFilter} />
+            <PlantList plantList={filteredPlantList()} />
         </main>
     )
 }
