@@ -15,7 +15,7 @@ function PlantCard({ plant }) {
             {isInStock ? (
                 <button className="primary" onClick={toggleInStock}>In Stock</button>
             ) : (
-                <button onClick={togg}>Out of Stock</button>
+                <button onClick={toggleInStock}>Out of Stock</button>
             )}
         </li>
     )
