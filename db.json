@@ -47,6 +47,18 @@
       "name": "new plant",
       "image": "./images/aloe.jpg",
       "price": "420.00"
+    },
+    {
+      "id": "8ff5",
+      "name": "test plant 2",
+      "image": "./images/zz-plant.jpg",
+      "price": "69"
+    },
+    {
+      "id": "c02a",
+      "name": "",
+      "image": "",
+      "price": "055"
     }
   ]
 }

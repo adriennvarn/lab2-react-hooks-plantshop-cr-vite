@@ -13,7 +13,8 @@ function NewPlantForm({ addPlant }) {
 
     // dynamically update plant data and form
     const handleChange = (e) => {
-        const {name, value} = e.target
+        const { name, value } = e.target
+        // set data
         setPlantData({
             ...plantData,
             [name]: value
