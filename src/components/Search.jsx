@@ -1,4 +1,4 @@
-import React from "react";
+import React from "react"
 
 function Search() {
   return (
@@ -11,7 +11,7 @@ function Search() {
         onChange={(e) => console.log("Searching...")}
       />
     </div>
-  );
+  )
 }
 
-export default Search;
+export default Search

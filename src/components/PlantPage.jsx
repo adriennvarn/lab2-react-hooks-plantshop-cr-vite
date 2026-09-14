@@ -1,7 +1,7 @@
-import React from "react";
-import NewPlantForm from "./NewPlantForm";
-import PlantList from "./PlantList";
-import Search from "./Search";
+import React from "react"
+import NewPlantForm from "./NewPlantForm"
+import PlantList from "./PlantList"
+import Search from "./Search"
 
 function PlantPage() {
   return (
@@ -10,7 +10,7 @@ function PlantPage() {
       <Search />
       <PlantList />
     </main>
-  );
+  )
 }
 
-export default PlantPage;
+export default PlantPage

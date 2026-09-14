@@ -1,4 +1,4 @@
-import React from "react";
+import React from "react"
 
 function NewPlantForm() {
   return (
@@ -11,7 +11,7 @@ function NewPlantForm() {
         <button type="submit">Add Plant</button>
       </form>
     </div>
-  );
+  )
 }
 
-export default NewPlantForm;
+export default NewPlantForm

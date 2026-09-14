@@ -1,4 +1,4 @@
-import React from "react";
+import React from "react"
 
 function PlantCard() {
   return (
@@ -12,7 +12,7 @@ function PlantCard() {
         <button>Out of Stock</button>
       )}
     </li>
-  );
+  )
 }
 
-export default PlantCard;
+export default PlantCard
