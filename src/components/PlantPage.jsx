@@ -16,7 +16,6 @@ function PlantPage() {
     // add a plant to the list
     // uses pessimistic rendering
     const addPlant = (newPlant) => {
-        newPlant.price = +newPlant.price
         fetch(API_URL, {
             method: "POST",
             headers: {
@@ -59,10 +58,7 @@ function PlantPage() {
         <main>
             <NewPlantForm addPlant={addPlant} />
             <Search filter={filter} setFilter={setFilter} />
-            {error ?
-                <p style={{ color: "red" }}>Error: {error}</p> :
-                <PlantList plantList={filteredPlantList()} />
-            }
+            <PlantList plantList={filteredPlantList()} />
         </main>
     )
 }
