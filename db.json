@@ -41,24 +41,6 @@
       "name": "Fiddle Leaf Fig",
       "image": "./images/fiddle-leaf-fig.jpg",
       "price": 55
-    },
-    {
-      "id": "39be",
-      "name": "new plant",
-      "image": "./images/aloe.jpg",
-      "price": "420.00"
-    },
-    {
-      "id": "8ff5",
-      "name": "test plant 2",
-      "image": "./images/zz-plant.jpg",
-      "price": "69"
-    },
-    {
-      "id": "c02a",
-      "name": "",
-      "image": "",
-      "price": "055"
     }
   ]
 }
