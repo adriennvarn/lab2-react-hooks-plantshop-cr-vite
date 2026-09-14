@@ -30,6 +30,7 @@ function PlantPage() {
             .catch(err => setError(err.message))
     }
 
+    // load plants list
     function fetchPlants() {
         fetch(API_URL)
             .then(r => {
